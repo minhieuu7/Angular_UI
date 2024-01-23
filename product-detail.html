@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark mb-4">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Về chúng tôi</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Danh mục
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Công nghệ</a>
+                <a class="dropdown-item" href="#">Mỹ phẩm</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="product-list">Sản Phẩm</a>
+            </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a href="/login"><button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit">Đăng nhập</button></a>
+            <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit">Đăng Ký</button>
+    
+          </form>
+        </div>
+    </nav>
+
+    <!-- product detail -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="data:image/jpeg;base64,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" alt="Product Image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Product B</h2>
+                <p class="text-muted">Product description goes here.</p>
+                
+                <!-- Product Pricing -->
+                <h4 class="mb-3">Price: $19.99</h4>
+                
+                <!-- Add to Cart Button -->
+                <button class="btn btn-primary mb-3">
+                    <i class="fa fa-shopping-cart"></i> Add to Cart
+                </button>
+
+                <!-- Product Reviews -->
+                <h4>Product Reviews</h4>
+                <div class="media">
+                    <img src="" class="mr-3" alt="Avatar">
+                    <div class="media-body">
+                        <h5 class="mt-0">Minh Hieu</h5>
+                        <p>sản phẩm rất ok !</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <img src="/path/to/user-avatar.jpg" class="mr-3" alt="Avatar">
+                    <div class="media-body">
+                        <h5 class="mt-0">Quang Minh</h5>
+                        <p>Tôi sẽ ủng hộ shop lần tới</p>
+                    </div>
+                </div>
+
+                <!-- Comment Form -->
+                <h4>Leave a Comment</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" class="form-control" id="name"name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <br><br><br>
+    <footer class="text-center text-white bg-dark py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="h5">Thông tin về shop</h2>
+              <p class="text-muted">Mô tả về shop và sản phẩm</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="h5">Thông tin liên hệ</h2>
+              <p class="text-muted">Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+              <p class="text-muted">Email: info&#64;example.com</p>
+              <p class="text-muted">Điện thoại: 0123-456-789</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="h5">Gửi phản hồi</h2>
+              <form>
+                <div class="form-group">
+                  <label for="name">Họ và tên:</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="feedback">Phản hồi:</label>
+                  <textarea class="form-control" id="feedback" name="feedback" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning">Gửi phản hồi</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
